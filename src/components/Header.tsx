@@ -1,43 +1,14 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [showNav, setShowNav] = useState(true)
-  const lastScrollY = useRef(0)
-  const lastChangeAt = useRef(0)
 
   useEffect(() => {
-    const onScroll = () => {
-      const y = window.scrollY
-      const now = performance.now()
-
-      setIsScrolled(y > 24)
-
-      // hide when scrolling down, show when scrolling up or stop
-      if (y > lastScrollY.current + 4) {
-        // scrolling down
-        if (now - lastChangeAt.current > 120) {
-          setShowNav(false)
-          lastChangeAt.current = now
-        }
-      } else if (y < lastScrollY.current - 4) {
-        // scrolling up
-        if (now - lastChangeAt.current > 60) {
-          setShowNav(true)
-          lastChangeAt.current = now
-        }
-      } else {
-        // minimal movement: if user stopped for a bit, show it
-        if (now - lastChangeAt.current > 400) setShowNav(true)
-      }
-
-      lastScrollY.current = y
-    }
-
+    const onScroll = () => setIsScrolled(window.scrollY > 24)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
@@ -61,13 +32,13 @@ const Header = () => {
     <header
       className={[
         'fixed left-0 right-0 top-0 z-50 transition-all duration-300',
-        showNav ? 'translate-y-0' : '-translate-y-full',
         isScrolled ? 'bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-lg' : 'bg-transparent',
       ].join(' ')}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo on the very left */}
+
+          {/* Small logo on the far left */}
           <button
             onClick={() => scrollToSection('hero')}
             className="flex items-center gap-2"
