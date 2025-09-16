@@ -11,7 +11,6 @@ const Header = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
-
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -46,12 +45,12 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex-shrink-0 flex justify-center items-center">
+          <div className="flex-shrink-0">
             <Image
-              src="https://drive.google.com/uc?export=view&id=1DPn6g14v7FAJ8_FNqUskiqJbcjHiHgnb"
+              src="/logo.png"
               alt="Macani Solutions Logo"
-              width={160}
-              height={60}
+              width={160}   // adjust logo size
+              height={160}
               className="object-contain"
               priority
             />
