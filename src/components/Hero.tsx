@@ -7,16 +7,18 @@ const Hero = () => {
     <section id="hero" className="relative pt-36 pb-16 sm:pt-[9.5rem] sm:pb-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-        {/* Bigger centered logo – no circle/wrapper */}
-        <div className="mx-auto mb-10 flex items-center justify-center">
-          <Image
-            src="/logo.png"
-            alt="Macani Solutions Logo"
-            width={900}
-            height={900}
-            priority
-            className="h-auto w-[36rem] sm:w-[40rem] md:w-[44rem] lg:w-[48rem] xl:w-[56rem] object-contain"
-          />
+        {/* Big centered logo (controlled by the wrapper's width/height) */}
+        <div className="mx-auto mb-10 flex items-center justify-center w-full">
+          {/* ← EDIT THESE sizes to make it bigger/smaller */}
+          <div className="relative w-[36rem] sm:w-[40rem] md:w-[44rem] lg:w-[48rem] xl:w-[56rem] h-[12rem] sm:h-[14rem] md:h-[16rem] lg:h-[18rem] xl:h-[20rem]">
+            <Image
+              src="/logo.png?v=2"       // add ?v=2 to bust cache if needed
+              alt="Macani Solutions Logo"
+              fill
+              priority
+              className="object-contain"
+            />
+          </div>
         </div>
 
         {/* Keep these if you want supporting text; remove if you want ONLY the logo */}
