@@ -15,7 +15,7 @@ const Hero = () => {
             width={2000}
             height={2000}
             priority
-            className="w-56 sm:w-72 md:w-96 lg:w-[28rem] xl:w-[32rem] h-auto object-contain"
+            className="w-80 sm:w-90 md:w-96 lg:w-[28rem] xl:w-[32rem] h-auto object-contain"
           />
         </div>
 
