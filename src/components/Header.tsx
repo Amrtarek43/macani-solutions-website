@@ -47,8 +47,8 @@ const Header = () => {
             <Image
               src="/logo.png"
               alt="Macani Solutions"
-              width={120}
-              height={40}
+              width={400}
+              height={400}
               className="object-contain"
               priority
             />
