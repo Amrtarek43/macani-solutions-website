@@ -8,12 +8,12 @@ const Hero = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
         {/* Bigger centered logo – no circle/wrapper */}
-        <div className="mx-auto mb-6 flex items-center justify-center">
+        <div className="mx-auto mb-10 flex items-center justify-center">
           <Image
             src="/logo.png"
             alt="Macani Solutions Logo"
-            width={2000}
-            height={2000}
+            width={900}
+            height={900}
             priority
             className="h-auto w-[36rem] sm:w-[40rem] md:w-[44rem] lg:w-[48rem] xl:w-[56rem] object-contain"
           />
