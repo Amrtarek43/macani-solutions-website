@@ -4,37 +4,31 @@ import Image from 'next/image'
 
 const Hero = () => {
   return (
-    <section
-      id="hero"
-      className="relative pt-36 pb-16 sm:pt-[9.5rem] sm:pb-20"
-    >
+    <section id="hero" className="relative pt-36 pb-16 sm:pt-[9.5rem] sm:pb-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-        {/* ---- Centered Logo (no circle) ---- */}
+        {/* Big centered logo – no circle/wrapper */}
         <div className="mx-auto mb-6 flex items-center justify-center">
           <Image
-            src="/logo.png"                 // we’re using the file you added in /public
+            src="/logo.png"
             alt="Macani Solutions Logo"
-            width={360}
-            height={360}
+            width={420}
+            height={420}
             priority
-            className="w-40 sm:w-56 md:w-72 lg:w-80 h-auto object-contain" // responsive size
+            className="w-44 sm:w-60 md:w-72 lg:w-80 xl:w-[22rem] h-auto object-contain"
           />
         </div>
 
-        {/* If you want literally ONLY the logo at the top, comment out everything below this line */}
-        {/* ---------- Subheading ---------- */}
+        {/* Keep supporting text/CTAs, or delete below if you want literally only the logo */}
         <p className="mt-4 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
           Scale Your Operations with Expert Solutions
         </p>
 
-        {/* ---------- Paragraph ---------- */}
         <p className="mt-6 text-base sm:text-lg text-gray-500 max-w-2xl mx-auto">
           Innovative IT consulting startup delivering cutting-edge technology solutions across
           Florida, Dubai, and Riyadh. Transform your business with our expert services.
         </p>
 
-        {/* ---------- CTAs ---------- */}
         <div className="mt-10 flex items-center justify-center gap-4">
           <a
             href="#services"
