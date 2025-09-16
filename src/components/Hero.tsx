@@ -12,8 +12,8 @@ const Hero = () => {
           <Image
             src="/logo.png"
             alt="Macani Solutions Logo"
-            width={800}
-            height={800}
+            width={2000}
+            height={2000}
             priority
             className="w-56 sm:w-72 md:w-96 lg:w-[28rem] xl:w-[32rem] h-auto object-contain"
           />
