@@ -7,19 +7,19 @@ const Hero = () => {
     <section id="hero" className="relative pt-36 pb-16 sm:pt-[9.5rem] sm:pb-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-        {/* Big centered logo – no circle/wrapper */}
+        {/* Bigger centered logo – no circle/wrapper */}
         <div className="mx-auto mb-6 flex items-center justify-center">
           <Image
             src="/logo.png"
             alt="Macani Solutions Logo"
-            width={420}
-            height={420}
+            width={640}
+            height={640}
             priority
-            className="w-44 sm:w-60 md:w-72 lg:w-80 xl:w-[22rem] h-auto object-contain"
+            className="w-56 sm:w-72 md:w-96 lg:w-[28rem] xl:w-[32rem] h-auto object-contain"
           />
         </div>
 
-        {/* Keep supporting text/CTAs, or delete below if you want literally only the logo */}
+        {/* Keep these if you want supporting text; remove if you want ONLY the logo */}
         <p className="mt-4 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
           Scale Your Operations with Expert Solutions
         </p>
