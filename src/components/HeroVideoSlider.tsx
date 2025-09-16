@@ -1,59 +1,47 @@
-
 'use client'
 
-import { useState, useEffect } from 'react'
-
-const SOURCES = [
-  {
-    src: '/slides/3130284-uhd_3840_2160_30fps.mp4',
-    title: 'Innovative IT Consulting',
-    subtitle: 'Delivering cutting-edge solutions across Florida, Dubai, and Riyadh.',
-  },
-  {
-    src: '/slides/4990233-hd_1920_1080_30fps.mp4',
-    title: 'Scale with Expert Solutions',
-    subtitle: 'Helping your business grow with modern technology strategies.',
-  },
-]
+import Image from 'next/image'
 
 const HeroVideoSlider = () => {
-  const [current, setCurrent] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % SOURCES.length)
-    }, 6000) // 6 seconds per slide
-    return () => clearInterval(interval)
-  }, [])
-
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      {/* Video Slides */}
-      {SOURCES.map((video, index) => (
-        <video
-          key={index}
-          src={video.src}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${
-            index === current ? 'opacity-100' : 'opacity-0'
-          }`}
-        />
-      ))}
+      {/* Background video */}
+      <video
+        src="/slides/3130284-uhd_3840_2160_30fps.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="absolute top-0 left-0 w-full h-full object-cover"
+      />
 
-      {/* Dark overlay for readability */}
+      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40" />
 
-      {/* Text Overlay */}
+      {/* Overlay Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        
+        {/* Logo centered above */}
+        <div className="mb-6">
+          <Image
+            src="/logo.png"
+            alt="Macani Solutions"
+            width={220}   // adjust logo size here
+            height={220}
+            className="mx-auto object-contain"
+            priority
+          />
+        </div>
+
+        {/* Title */}
         <h1 className="text-4xl sm:text-6xl font-bold drop-shadow-lg mb-4">
-          {SOURCES[current].title}
+          Innovative IT Consulting
         </h1>
+
+        {/* Subtitle */}
         <p className="text-lg sm:text-2xl max-w-2xl drop-shadow-lg">
-          {SOURCES[current].subtitle}
+          Delivering cutting-edge solutions across Florida, Dubai, and Riyadh.
         </p>
       </div>
     </section>
