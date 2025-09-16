@@ -18,9 +18,7 @@ const Header = () => {
   const scrollToSection = (sectionId: string) => {
     if (typeof window !== 'undefined') {
       const element = document.getElementById(sectionId)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
+      if (element) element.scrollIntoView({ behavior: 'smooth' })
     }
     setIsMobileMenuOpen(false)
   }
@@ -44,39 +42,40 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0">
+
+          {/* ---- Small logo on the very left ---- */}
+          <button
+            className="flex-shrink-0 flex items-center"
+            onClick={() => scrollToSection('hero')}
+            aria-label="Go to top"
+          >
             <Image
               src="/logo.png"
-              alt="Macani Solutions Logo"
-              width={160}   // adjust logo size
-              height={160}
+              alt="Macani Solutions"
+              width={120}         // smaller logo size for navbar
+              height={40}
               className="object-contain"
               priority
             />
-          </div>
+          </button>
 
-          {/* Desktop Navigation */}
+          {/* ---- Desktop Navigation ---- */}
           <nav className="hidden md:flex space-x-8">
             {navigationItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
                 className={`px-3 py-2 text-sm font-medium transition-all duration-300 relative group ${
-                  isScrolled
-                    ? 'text-black hover:text-[#00bf63]'
-                    : 'text-white hover:text-[#00bf63]'
+                  isScrolled ? 'text-black hover:text-[#00bf63]' : 'text-white hover:text-[#00bf63]'
                 }`}
               >
                 {item.label}
-                <span
-                  className={`absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 bg-[#00bf63]`}
-                ></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 bg-[#00bf63]" />
               </button>
             ))}
           </nav>
 
-          {/* CTA Button */}
+          {/* ---- CTA Button ---- */}
           <div className="hidden md:flex items-center space-x-4">
             <button
               onClick={() => scrollToSection('contact')}
@@ -86,43 +85,27 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Mobile menu button */}
+          {/* ---- Mobile menu button ---- */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`focus:outline-none focus:ring-2 focus:ring-lime-400 p-2 rounded-lg transition-colors ${
-                isScrolled
-                  ? 'text-gray-900 hover:text-lime-500'
-                  : 'text-white hover:text-lime-400'
+                isScrolled ? 'text-gray-900 hover:text-lime-500' : 'text-white hover:text-lime-400'
               }`}
+              aria-label="Toggle menu"
             >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMobileMenuOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 )}
               </svg>
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* ---- Mobile Navigation ---- */}
         <div
           className={`md:hidden transition-all duration-300 overflow-hidden ${
             isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
