@@ -23,9 +23,9 @@ const HeroVideoSlider = () => {
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
 
         {/* Logo larger & lower */}
-        <div className="mb-15 mt-20"> 
+        <div className="mb-15 mt-40"> 
           <Image
-            src="/logo.png"
+            src="/SA.png"
             alt="Macani Solutions"
             width={420}   // increased size
             height={420}
