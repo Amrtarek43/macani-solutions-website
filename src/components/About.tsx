@@ -51,7 +51,6 @@ const About = () => {
         {/* Section Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-6xl font-orbitron font-bold mb-6">
-            <span className="text-gray-900">About </span>
             <span className="bg-gradient-to-r from-[#00bf63] to-[#00a555] bg-clip-text text-transparent">
               Macani Solutions
             </span>
