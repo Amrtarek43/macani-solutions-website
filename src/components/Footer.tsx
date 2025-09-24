@@ -13,10 +13,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   const services = [
-    { name: 'IT Consulting', href: 'services' },
-    { name: 'Managed Services', href: 'services' },
-    { name: 'Cloud Solutions', href: 'services' },
-    { name: 'Technology Outsourcing', href: 'services' },
+    { name: 'Strategic Resourcing', href: 'services' },
+    { name: 'Professional and Managed Services', href: 'services' },
+    { name: 'Learning and Content Development Services', href: 'services' },
+    { name: 'Cloud Sloutions', href: 'services' },
   ]
 
   const locations = [
