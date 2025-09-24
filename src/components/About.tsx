@@ -58,8 +58,7 @@ const About = () => {
           </h2>
           <div className="w-24 h-1 bg-[#00bf63] mx-auto mb-6"></div>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            An innovative IT consulting startup transforming businesses through technology 
-            across Florida, Dubai, and Riyadh.
+            Empowering businesses with world-class outsourcing, managed services, and IT consulting across Florida, Dubai, and Riyadh
           </p>
         </div>
 
@@ -71,16 +70,21 @@ const About = () => {
             </h3>
             <div className="space-y-4 text-gray-700 text-lg">
               <p>
-                Founded with a vision to transform businesses through technology, Macani Solutions 
-                has established itself as a trusted partner for organizations worldwide.
+               Founded in 2020, Macani Solutions has grown into a trusted partner for organizations across 
+               Florida, Dubai, and Riyadh.
               </p>
               <p>
-                Our comprehensive approach combines strategic consulting, robust managed services, 
-                and efficient outsourcing solutions to deliver measurable business value.
+                As Silver Partners with Tech Regula and BPM Consultants, we bring global expertise and strong 
+                alliances that enable us to deliver outstanding results.
               </p>
               <p>
-                With expertise in emerging technologies and a commitment to innovation, we help 
-                organizations navigate their digital transformation journey with confidence.
+                We specialize in outsourcing, managed services, and strategic IT consulting, ensuring businesses
+                gain the right talent, the right solutions, and measurable value at every step.
+              </p>
+
+              <p>
+                With a commitment to innovation and excellence, Macani Solutions continues to help organizations 
+                scale smarter and navigate their digital transformation journey with confidence.
               </p>
             </div>
             <div className="mt-8">
