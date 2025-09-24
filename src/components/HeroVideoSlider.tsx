@@ -25,7 +25,7 @@ const HeroVideoSlider = () => {
         {/* Logo larger & lower */}
         <div className="mb-15 mt-20"> 
           <Image
-            src="/MACANI SOLUTIONS.png"
+            src="/logo.png"
             alt="Macani Solutions"
             width={420}   // increased size
             height={420}
@@ -36,12 +36,12 @@ const HeroVideoSlider = () => {
 
         {/* Title */}
         <h1 className="text-4xl sm:text-6xl font-bold drop-shadow-lg mb-4">
-          Innovative IT Consulting
+          MACANI SOLUTIONS
         </h1>
 
         {/* Subtitle */}
         <p className="text-lg sm:text-2xl max-w-2xl drop-shadow-lg">
-          Delivering cutting-edge solutions across Florida, Dubai, and Riyadh.
+          Empowering businesses with world-class outsourcing, managed services, and IT consulting.
         </p>
       </div>
     </section>
