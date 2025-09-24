@@ -21,14 +21,14 @@ const HeroVideoSlider = () => {
 
       {/* Overlay Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        
-        {/* Logo centered above */}
-        <div className="mb-6">
+
+        {/* Logo larger & lower */}
+        <div className="mb-10 mt-20"> 
           <Image
             src="/logo.png"
             alt="Macani Solutions"
-            width={220}   // adjust logo size here
-            height={220}
+            width={420}   // increased size
+            height={420}
             className="mx-auto object-contain"
             priority
           />
