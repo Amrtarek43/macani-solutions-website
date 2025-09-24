@@ -182,7 +182,8 @@ const Services = () => {
             </div>
           </div>
         </div>
-
+{/* CTA section removed */}
+      </div>
        
     </section>
   )
