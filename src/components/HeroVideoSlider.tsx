@@ -21,13 +21,13 @@ const HeroVideoSlider = () => {
 
       {/* Overlay Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-
-        {/* Logo larger & lower */}
-        <div className="mb-20 mt-20"> 
-          <Image
-            src="/SA.png"
+        
+        {/* Logo centered above */}
+        <div className="mb-6">
+		 <Image
+            src="/logo.png"
             alt="Macani Solutions"
-            width={420}   // increased size
+			width={420}   // increased size
             height={420}
             className="mx-auto object-contain"
             priority
@@ -36,12 +36,12 @@ const HeroVideoSlider = () => {
 
         {/* Title */}
         <h1 className="text-4xl sm:text-6xl font-bold drop-shadow-lg mb-4">
-          MACANI SOLUTIONS
+          Innovative IT Consulting
         </h1>
 
         {/* Subtitle */}
         <p className="text-lg sm:text-2xl max-w-2xl drop-shadow-lg">
-          Empowering businesses with world-class outsourcing, managed services, and IT consulting.
+          Delivering cutting-edge solutions across Florida, Dubai, and Riyadh.
         </p>
       </div>
     </section>
