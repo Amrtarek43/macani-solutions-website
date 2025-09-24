@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
         {/* Big centered logo (controlled by the wrapper's width/height) */}
-        <div className="mx-auto mb-10 flex items-center justify-center w-full">
+        <div className="mx-auto mt-20 mb-5 flex items-center justify-center w-full">
           {/* ← EDIT THESE sizes to make it bigger/smaller */}
           <div className="relative w-[36rem] sm:w-[40rem] md:w-[44rem] lg:w-[48rem] xl:w-[56rem] h-[12rem] sm:h-[14rem] md:h-[16rem] lg:h-[18rem] xl:h-[20rem]">
             <Image
