@@ -43,7 +43,7 @@ const Header = () => {
               src="/logo.png"
               alt="Macani Solutions"
               width={180}   // tweak here if you want bigger/smaller
-              height={60}
+              height={100}
               className="object-contain"
               priority
             />
@@ -115,7 +115,7 @@ const Header = () => {
               onClick={() => scrollToSection('contact')}
               className="bg-[#00bf63] hover:bg-[#00a555] text-white px-4 py-2 rounded-lg font-semibold w-full mt-2 hover:shadow-lg hover:shadow-[#00bf63]/50 transition-all duration-300"
             >
-              Get Started
+              Let's Connect
             </button>
           </div>
         </div>
