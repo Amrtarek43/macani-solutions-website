@@ -30,26 +30,26 @@ const Services = () => {
 
   const services = [
     {
-      title: 'IT Consulting',
-      description: 'Strategic technology consulting and digital transformation guidance',
+      title: 'Strategic Resourcing',
+      description: 'Complete IT operations and development outsourcing solutions',
+      features: [
+        'Software Development',
+        'Quality Assurance',
+        'DevOps & Automation',
+        'Technical Support'
+      ],
+      icon: '👥'
+    },
+    {
+      title: 'Professional and Managed Services',
+      description: 'Scalability, agility, and flexibility to master digital transformation.',
       features: [
         'Digital Strategy Development',
         'Technology Assessment',
         'Infrastructure Planning',
         'Security Consulting'
       ],
-      icon: '💡'
-    },
-    {
-      title: 'Managed Services',
-      description: 'Comprehensive 24/7 IT support and infrastructure management',
-      features: [
-        '24/7 System Monitoring',
-        'Proactive Maintenance',
-        'Help Desk Support',
-        'Data Backup & Recovery'
-      ],
-      icon: '🔧'
+      icon: '⚙️'
     },
     {
       title: 'Cloud Solutions',
@@ -63,15 +63,15 @@ const Services = () => {
       icon: '☁️'
     },
     {
-      title: 'Technology Outsourcing',
-      description: 'Complete IT operations and development outsourcing solutions',
+      title: 'Learning and Content Development Services',
+      description: 'Training solutions developed and delivered by engineers',
       features: [
-        'Software Development',
-        'Quality Assurance',
-        'DevOps & Automation',
-        'Technical Support'
+        'Hands-On Technical Workshops',
+        'Customized Learning Paths',
+        'Certification-Oriented Training',
+        'Onsite & Virtual Delivery'
       ],
-      icon: '🚀'
+      icon: '📚'
     }
   ]
 
@@ -183,24 +183,7 @@ const Services = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className={`text-center mt-16 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="bg-gradient-to-r from-[#00bf63]/10 to-gray-50 border border-[#00bf63]/20 rounded-lg p-8">
-            <h3 className="text-2xl md:text-3xl font-orbitron font-bold text-gray-900 mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-gray-700 text-lg mb-6 max-w-2xl mx-auto">
-              Let our experts help you design and implement the perfect technology solution.
-            </p>
-            <button
-              onClick={scrollToContact}
-              className="bg-[#00bf63] hover:bg-[#00a555] text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-xl hover:shadow-[#00bf63]/50 transform hover:scale-105 transition-all duration-300"
-            >
-              Start Your Journey Today
-            </button>
-          </div>
-        </div>
-      </div>
+       
     </section>
   )
 }
